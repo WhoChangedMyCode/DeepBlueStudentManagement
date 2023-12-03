@@ -15,7 +15,7 @@
 			</el-table-column>
 		</el-table>
 		<!--添加时的确认框-->
-		<el-dialog v-model="dialogVisible" title="提示" width="350">
+		<el-dialog v-model="dialogVisible" title="修改" width="350">
 			<el-input v-model="user.name" placeholder="请输入姓名" />
 			<el-input v-model="user.department" placeholder="请输入部门" />
 			<el-input v-model="user.iphone" placeholder="请输入手机号" />
