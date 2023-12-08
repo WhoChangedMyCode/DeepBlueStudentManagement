@@ -4,8 +4,8 @@
 			<h3>深蓝软件学员管理系统</h3>
 			<el-input autofocus v-model="user.name" class="w-50 m-2" placeholder="演示账号：admin" prefix-icon="Stamp"
 				@focus="errhide" clearable />
-			<el-input v-model="user.psw" class="w-50 m-2" placeholder="演示账号密码：admin" type="password" prefix-icon="GoodsFilled"
-				show-password @focus="errhide" clearable />
+			<el-input v-model="user.psw" class="w-50 m-2" placeholder="演示账号密码：admin" type="password"
+				prefix-icon="GoodsFilled" show-password @focus="errhide" clearable />
 			<p class="err" ref="err">用户名或密码错误</p>
 			<el-button type="primary" class="login-btn" @click="submit">登录</el-button>
 		</div>
@@ -86,17 +86,6 @@ export default {
 			this.$refs.err.style.height = "0px";
 		},
 	},
-	mounted() {
-		this.$axios
-			.get('http://localhost:8080/user.json')
-			.then(res => {
-				console.log(res.data)
-			})
-			.catch(err => {
-
-			})
-
-	}
 }
 </script>
 <style lang="less" scoped="scoped">
